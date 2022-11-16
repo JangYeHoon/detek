@@ -10,7 +10,7 @@ type DetectorSetInitiator func(map[string]string) []detek.Detector
 var (
 	DetectorSet map[string]DetectorSetInitiator = map[string]DetectorSetInitiator{
 		DefaultSet: func(m map[string]string) []detek.Detector {
-			return []detek.Detector{
+			/*return []detek.Detector{
 				&detector.FailedPod{},
 				&detector.PodWithoutLimits{
 					DoNotCheckCPU:    true, // Disable Checking CPU Limits
@@ -24,6 +24,10 @@ var (
 				&detector.PodWithoutReadinessProbe{},
 				&detector.ServiceNoAvailableTarget{},
 				&detector.ServicePartiallyAvailable{},
+			}*/
+			return []detek.Detector{
+				&detector.FailedServer{},
+				&detector.FailedPingVMFromHost{},
 			}
 		},
 		// add more preset here

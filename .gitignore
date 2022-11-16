@@ -14,3 +14,4 @@
 # IDEs
 .vscode
 .idea
+*.html
