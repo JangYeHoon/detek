@@ -16,7 +16,6 @@ var CollectorSet map[string]CollectorSetInitiator = map[string]CollectorSetIniti
 		return []detek.Collector{
 			&collector.OpenStackCollector{},
 			&collector.OpenStackCoreCollector{},
-			&collector.CephClientCollector{},
 		}
 	},
 	// add more preset here
